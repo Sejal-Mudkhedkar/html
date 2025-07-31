@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Page</title>
+  <style>
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 30px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #34495e;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 18px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #2980b9;
+      outline: none;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .form-group-inline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .submit-btn {
+      background-color: #2980b9;
+      color: white;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #1c5980;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="form.html">
+    <h1>User Info</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Sex:</label>
+    <div class="form-group-inline">
+      <input type="radio" name="sex" id="male" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" name="sex" id="female" value="female">
+      <label for="female">Female</label>
+    </div>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="pwd">Password:</label>
+    <input type="password" name="pwd" id="pwd" required>
+
+    <label for="country">Country:</label>
+    <select name="country" id="country" required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="nepal">Nepal</option>
+      <option value="usa">USA</option>
+      <option value="australia">Australia</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" rows="4" placeholder="Leave a message..."></textarea>
+
+    <div class="form-group-inline">
+      <input type="checkbox" name="newsletter" id="newsletter">
+      <label for="newsletter">Subscribe to newsletter</label>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+
+</body>
+</html>
